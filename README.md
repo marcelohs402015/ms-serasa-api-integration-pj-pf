@@ -152,3 +152,9 @@ Antes de executar a aplicacao, e obrigatorio definir as variaveis de ambiente:
 ```bash
 ./gradlew.bat test
 ```
+
+## Creditos
+API feita por Marcelo Hernandes.
+
+- LinkedIn: [https://www.linkedin.com/in/marcelo-hernandes-da-silva-351a7159/](https://www.linkedin.com/in/marcelo-hernandes-da-silva-351a7159/)
+- Site: [https://marcelohsilva.com.br/](https://marcelohsilva.com.br/)
