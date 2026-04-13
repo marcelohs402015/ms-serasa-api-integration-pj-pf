@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /ms-serasa-api
+
+management:
+  server:
+    port: 8081
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+
+logging:
+  level:
+    br.com.ftd.msserasaapi.feign: DEBUG
+
+serasa:
+  auth-base-url: ${SERASA_AUTH_BASE_URL:https://uat-api.serasaexperian.com.br}
+  token-path: ${SERASA_TOKEN_PATH:/security/iam/v1/client-identities/login}
+  client-id: ${SERASA_CLIENT_ID}
+  client-secret: ${SERASA_CLIENT_SECRET}
+  refresh-window-seconds: ${SERASA_REFRESH_WINDOW_SECONDS:60}
+  report-base-url: ${SERASA_REPORT_BASE_URL:https://uat-api.serasaexperian.com.br}
+  pf-report-path: ${SERASA_PF_REPORT_PATH:/credit-services/person-information-report/v1/creditreport}
+  pj-report-path: ${SERASA_PJ_REPORT_PATH:/credit-services/business-information-report/v1/reports}
+  retailer-document-id: ${SERASA_RETAILER_DOCUMENT_ID:}
+  cost-center: ${SERASA_COST_CENTER:}

@@ -138,6 +138,11 @@ Variaveis principais:
 - `SERASA_RETAILER_DOCUMENT_ID` (opcional)
 - `SERASA_COST_CENTER` (opcional)
 
+### Requisito obrigatorio para subir a API
+Antes de executar a aplicacao, e obrigatorio definir as variaveis de ambiente:
+- `SERASA_CLIENT_ID`
+- `SERASA_CLIENT_SECRET`
+
 ## Execucao local
 ```bash
 ./gradlew.bat bootRun

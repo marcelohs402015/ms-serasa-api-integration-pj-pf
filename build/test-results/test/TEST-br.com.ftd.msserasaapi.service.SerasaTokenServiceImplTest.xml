@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.com.ftd.msserasaapi.service.SerasaTokenServiceImplTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-04-09T16:48:19" hostname="LAPTOP-2TTGS5I3" time="0.118">
+  <properties/>
+  <testcase name="shouldReuseCachedTokenWhenStillValid()" classname="br.com.ftd.msserasaapi.service.SerasaTokenServiceImplTest" time="0.118"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

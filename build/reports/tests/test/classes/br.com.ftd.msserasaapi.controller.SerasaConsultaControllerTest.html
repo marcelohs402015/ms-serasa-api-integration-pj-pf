@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - SerasaConsultaControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>SerasaConsultaControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/br.com.ftd.msserasaapi.controller.html">br.com.ftd.msserasaapi.controller</a> &gt; SerasaConsultaControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">6</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.978s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">shouldReturnBadRequestWhenFeaturesIsEmpty()</td>
+<td class="success">0.618s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldReturnBadRequestWhenPayloadIsInvalid()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldReturnBadRequestWhenPfDocumentIsInvalid()</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldReturnBadRequestWhenTipoIsInvalid()</td>
+<td class="success">0.018s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldReturnReportWhenPfConsultaIsSuccessful()</td>
+<td class="success">0.306s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldReturnReportWhenPjConsultaIsSuccessful()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>13:48:12.960 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+13:48:12.967 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+13:48:13.000 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [br.com.ftd.msserasaapi.controller.SerasaConsultaControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+13:48:13.013 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [br.com.ftd.msserasaapi.controller.SerasaConsultaControllerTest], using SpringBootContextLoader
+13:48:13.016 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [br.com.ftd.msserasaapi.controller.SerasaConsultaControllerTest]: class path resource [br/com/ftd/msserasaapi/controller/SerasaConsultaControllerTest-context.xml] does not exist
+13:48:13.016 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [br.com.ftd.msserasaapi.controller.SerasaConsultaControllerTest]: class path resource [br/com/ftd/msserasaapi/controller/SerasaConsultaControllerTestContext.groovy] does not exist
+13:48:13.016 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [br.com.ftd.msserasaapi.controller.SerasaConsultaControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+13:48:13.017 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [br.com.ftd.msserasaapi.controller.SerasaConsultaControllerTest]: SerasaConsultaControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:48:13.078 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [br.com.ftd.msserasaapi.controller.SerasaConsultaControllerTest]
+13:48:13.133 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\projetos\java\ms-serasa-api\build\classes\java\main\br\com\ftd\msserasaapi\Application.class]
+13:48:13.134 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration br.com.ftd.msserasaapi.Application for test class br.com.ftd.msserasaapi.controller.SerasaConsultaControllerTest
+13:48:13.208 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [br.com.ftd.msserasaapi.controller.SerasaConsultaControllerTest]: using defaults.
+13:48:13.208 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+13:48:13.215 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+13:48:13.216 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+13:48:13.216 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@44a2b17b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7a56812e, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2a76b80a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7eb01b12, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2f4854d6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@61d9efe0, org.springframework.test.context.event.EventPublishingTestExecutionListener@7e70bd39, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@e6516e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6de54b40, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@43ed0ff3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@388ffbc2, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@a50b09c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4da855dd]
+13:48:13.221 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@64c2b546 testClass = SerasaConsultaControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@7e094740 testClass = SerasaConsultaControllerTest, locations = '{}', classes = '{class br.com.ftd.msserasaapi.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{serasa.auth-base-url=http://localhost:9090, serasa.report-base-url=http://localhost:9090, serasa.client-id=test-client-id, serasa.client-secret=test-client-secret, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@5aac4250, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@65045a87, [ImportsContextCustomizer@7a11c4c7 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2c7b5824, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@681a8b4e, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@119020fb, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2e385cce], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.18)
+
+2026-04-09 13:48:14.724  INFO 32432 --- [    Test worker] b.c.f.m.c.SerasaConsultaControllerTest   : Starting SerasaConsultaControllerTest using Java 17.0.11 on LAPTOP-2TTGS5I3 with PID 32432 (started by Marcelo in C:\projetos\java\ms-serasa-api)
+2026-04-09 13:48:14.725  INFO 32432 --- [    Test worker] b.c.f.m.c.SerasaConsultaControllerTest   : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2026-04-09 13:48:15.980  INFO 32432 --- [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d8c0e6dd-1b0c-30ca-8c25-6f8bc2444ea7
+2026-04-09 13:48:17.973  INFO 32432 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-04-09 13:48:17.973  INFO 32432 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-04-09 13:48:17.974  INFO 32432 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-04-09 13:48:18.596  INFO 32432 --- [    Test worker] b.c.f.m.c.SerasaConsultaControllerTest   : Started SerasaConsultaControllerTest in 4.407 seconds (JVM running for 6.58)
+2026-04-09 13:48:19.363 DEBUG 32432 --- [    Test worker] b.c.f.m.f.SerasaAuthenticationClient     : [SerasaAuthenticationClient#fetchToken] ---&gt; POST http://localhost:9090/security/iam/v1/client-identities/login HTTP/1.1
+2026-04-09 13:48:19.363 DEBUG 32432 --- [    Test worker] b.c.f.m.f.SerasaAuthenticationClient     : [SerasaAuthenticationClient#fetchToken] Authorization: Basic dGVzdC1jbGllbnQtaWQ6dGVzdC1jbGllbnQtc2VjcmV0
+2026-04-09 13:48:19.363 DEBUG 32432 --- [    Test worker] b.c.f.m.f.SerasaAuthenticationClient     : [SerasaAuthenticationClient#fetchToken] Content-Length: 2
+2026-04-09 13:48:19.363 DEBUG 32432 --- [    Test worker] b.c.f.m.f.SerasaAuthenticationClient     : [SerasaAuthenticationClient#fetchToken] Content-Type: application/json
+2026-04-09 13:48:19.363 DEBUG 32432 --- [    Test worker] b.c.f.m.f.SerasaAuthenticationClient     : [SerasaAuthenticationClient#fetchToken] 
+2026-04-09 13:48:19.363 DEBUG 32432 --- [    Test worker] b.c.f.m.f.SerasaAuthenticationClient     : [SerasaAuthenticationClient#fetchToken] {}
+2026-04-09 13:48:19.363 DEBUG 32432 --- [    Test worker] b.c.f.m.f.SerasaAuthenticationClient     : [SerasaAuthenticationClient#fetchToken] ---&gt; END HTTP (2-byte body)
+2026-04-09 13:48:19.565 DEBUG 32432 --- [    Test worker] b.c.f.m.f.SerasaAuthenticationClient     : [SerasaAuthenticationClient#fetchToken] &lt;--- HTTP/1.1 201 Created (200ms)
+2026-04-09 13:48:19.565 DEBUG 32432 --- [    Test worker] b.c.f.m.f.SerasaAuthenticationClient     : [SerasaAuthenticationClient#fetchToken] content-type: application/json
+2026-04-09 13:48:19.565 DEBUG 32432 --- [    Test worker] b.c.f.m.f.SerasaAuthenticationClient     : [SerasaAuthenticationClient#fetchToken] matched-stub-id: 4f1a130e-2db8-43c3-9481-9dec20b6cdbe
+2026-04-09 13:48:19.565 DEBUG 32432 --- [    Test worker] b.c.f.m.f.SerasaAuthenticationClient     : [SerasaAuthenticationClient#fetchToken] transfer-encoding: chunked
+2026-04-09 13:48:19.565 DEBUG 32432 --- [    Test worker] b.c.f.m.f.SerasaAuthenticationClient     : [SerasaAuthenticationClient#fetchToken] 
+2026-04-09 13:48:19.566 DEBUG 32432 --- [    Test worker] b.c.f.m.f.SerasaAuthenticationClient     : [SerasaAuthenticationClient#fetchToken] {
+  &quot;accessToken&quot;: &quot;mock-token&quot;,
+  &quot;tokenType&quot;: &quot;Bearer&quot;,
+  &quot;expiresIn&quot;: &quot;3600&quot;,
+  &quot;scope&quot;: [&quot;READ&quot;, &quot;WRITE&quot;]
+}
+
+2026-04-09 13:48:19.567 DEBUG 32432 --- [    Test worker] b.c.f.m.f.SerasaAuthenticationClient     : [SerasaAuthenticationClient#fetchToken] &lt;--- END HTTP (112-byte body)
+2026-04-09 13:48:19.577 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPfReportClient       : [SerasaPfReportClient#fetchReport] ---&gt; GET http://localhost:9090/credit-services/person-information-report/v1/creditreport?reportName=RELATORIO_INTERMEDIARIO_TOP_SCORE_PF HTTP/1.1
+2026-04-09 13:48:19.577 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPfReportClient       : [SerasaPfReportClient#fetchReport] Authorization: Bearer mock-token
+2026-04-09 13:48:19.577 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPfReportClient       : [SerasaPfReportClient#fetchReport] X-Document-Id: 00047668148
+2026-04-09 13:48:19.577 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPfReportClient       : [SerasaPfReportClient#fetchReport] ---&gt; END HTTP (0-byte body)
+2026-04-09 13:48:19.588 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPfReportClient       : [SerasaPfReportClient#fetchReport] &lt;--- HTTP/1.1 200 OK (10ms)
+2026-04-09 13:48:19.588 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPfReportClient       : [SerasaPfReportClient#fetchReport] content-type: application/json
+2026-04-09 13:48:19.588 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPfReportClient       : [SerasaPfReportClient#fetchReport] matched-stub-id: 3b0477fe-1641-4919-9c66-ae9d8721fed2
+2026-04-09 13:48:19.588 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPfReportClient       : [SerasaPfReportClient#fetchReport] transfer-encoding: chunked
+2026-04-09 13:48:19.588 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPfReportClient       : [SerasaPfReportClient#fetchReport] 
+2026-04-09 13:48:19.588 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPfReportClient       : [SerasaPfReportClient#fetchReport] {
+  &quot;protocolo&quot;: &quot;20260409ABC123&quot;,
+  &quot;dataConsulta&quot;: &quot;2026-04-09T15:00:00Z&quot;,
+  &quot;dadosCadastrais&quot;: {
+    &quot;nome&quot;: &quot;NOME FICTICIO&quot;,
+    &quot;situacaoReceitaFederal&quot;: &quot;REGULAR&quot;
+  }
+}
+
+2026-04-09 13:48:19.588 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPfReportClient       : [SerasaPfReportClient#fetchReport] &lt;--- END HTTP (175-byte body)
+2026-04-09 13:48:19.636 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPjReportClient       : [SerasaPjReportClient#fetchReport] ---&gt; GET http://localhost:9090/credit-services/business-information-report/v1/reports?reportName=RELATORIO_INTERMEDIARIO_TOP_SCORE_PJ HTTP/1.1
+2026-04-09 13:48:19.636 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPjReportClient       : [SerasaPjReportClient#fetchReport] Authorization: Bearer mock-token
+2026-04-09 13:48:19.637 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPjReportClient       : [SerasaPjReportClient#fetchReport] X-Document-Id: 11222333000181
+2026-04-09 13:48:19.637 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPjReportClient       : [SerasaPjReportClient#fetchReport] ---&gt; END HTTP (0-byte body)
+2026-04-09 13:48:19.639 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPjReportClient       : [SerasaPjReportClient#fetchReport] &lt;--- HTTP/1.1 200 OK (2ms)
+2026-04-09 13:48:19.639 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPjReportClient       : [SerasaPjReportClient#fetchReport] content-type: application/json
+2026-04-09 13:48:19.639 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPjReportClient       : [SerasaPjReportClient#fetchReport] matched-stub-id: d38ef028-7ac7-4787-ad9a-f33b15cde766
+2026-04-09 13:48:19.639 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPjReportClient       : [SerasaPjReportClient#fetchReport] transfer-encoding: chunked
+2026-04-09 13:48:19.639 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPjReportClient       : [SerasaPjReportClient#fetchReport] 
+2026-04-09 13:48:19.639 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPjReportClient       : [SerasaPjReportClient#fetchReport] {
+  &quot;reports&quot;: [
+    {
+      &quot;reportName&quot;: &quot;RELATORIO_INTERMEDIARIO_PJ&quot;
+    }
+  ]
+}
+
+2026-04-09 13:48:19.639 DEBUG 32432 --- [    Test worker] b.c.f.m.feign.SerasaPjReportClient       : [SerasaPjReportClient#fetchReport] &lt;--- END HTTP (84-byte body)
+2026-04-09 13:48:19.658  WARN 32432 --- [    Test worker] b.c.f.m.e.GlobalExceptionHandler         : Payload invalido
+
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `br.com.ftd.msserasaapi.model.TokenType` from String &quot;XX&quot;: not one of the values accepted for Enum class: [PJ, PF]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `br.com.ftd.msserasaapi.model.TokenType` from String &quot;XX&quot;: not one of the values accepted for Enum class: [PJ, PF]
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 11] (through reference chain: br.com.ftd.msserasaapi.model.ConsultaRequest[&quot;tipo&quot;])
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:391) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:343) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) ~[tomcat-embed-core-9.0.83.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-5.3.31.jar:5.3.31]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.83.jar:4.0.FR]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:167) ~[spring-test-5.3.31.jar:5.3.31]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.31.jar:5.3.31]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.31.jar:5.3.31]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.31.jar:5.3.31]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.7.18.jar:2.7.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.31.jar:5.3.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.3.31.jar:5.3.31]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201) ~[spring-test-5.3.31.jar:5.3.31]
+	at br.com.ftd.msserasaapi.controller.SerasaConsultaControllerTest.shouldReturnBadRequestWhenTipoIsInvalid(SerasaConsultaControllerTest.java:125) ~[test/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725) ~[junit-platform-commons-1.8.2.jar:1.8.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92) ~[na:na]
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63) ~[na:na]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
+Caused by: com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `br.com.ftd.msserasaapi.model.TokenType` from String &quot;XX&quot;: not one of the values accepted for Enum class: [PJ, PF]
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 11] (through reference chain: br.com.ftd.msserasaapi.model.ConsultaRequest[&quot;tipo&quot;])
+	at com.fasterxml.jackson.databind.exc.InvalidFormatException.from(InvalidFormatException.java:67) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.weirdStringException(DeserializationContext.java:1991) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleWeirdStringValue(DeserializationContext.java:1219) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.std.EnumDeserializer._deserializeAltString(EnumDeserializer.java:356) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.std.EnumDeserializer._fromString(EnumDeserializer.java:230) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.std.EnumDeserializer.deserialize(EnumDeserializer.java:198) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:542) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:564) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:439) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1405) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:352) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3682) ~[jackson-databind-2.13.5.jar:2.13.5]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:380) ~[spring-web-5.3.31.jar:5.3.31]
+	... 119 common frames omitted
+
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.10.2</a> at 9 de abr. de 2026 13:48:19</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.7.18'
+    id 'io.spring.dependency-management' version '1.1.7'
+    id 'org.openapi.generator' version '7.8.0'
+}
+
+group = 'br.com.ftd'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    set('springCloudVersion', "2021.0.8")
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    implementation 'io.swagger.core.v3:swagger-annotations:2.2.25'
+    implementation 'com.google.code.gson:gson:2.11.0'
+    implementation 'io.micrometer:micrometer-registry-prometheus'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.wiremock:wiremock-standalone:3.9.1'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+openApiGenerate {
+    generatorName = 'spring'
+    library = 'spring-boot'
+    inputSpec = "$rootDir/src/main/resources/static/serasa-auth-api.yaml"
+    outputDir = "$buildDir/generated"
+    apiPackage = 'br.com.ftd.msserasaapi.presentation.api'
+    modelPackage = 'br.com.ftd.msserasaapi.representation.models'
+    invokerPackage = 'br.com.ftd.msserasaapi.infrastructure'
+    configOptions = [
+            interfaceOnly         : 'true',
+            useSpringBoot3        : 'false',
+            dateLibrary           : 'java8',
+            serializableModel     : 'true',
+            useTags               : 'true',
+            openApiNullable       : 'false',
+            hideGenerationTimestamp: 'true'
+    ]
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir "$buildDir/generated/src/main/java"
+        }
+    }
+}
+
+tasks.named('compileJava') {
+    dependsOn tasks.named('openApiGenerate')
+}
+
+tasks.named('openApiGenerate') {
+    mustRunAfter tasks.named('clean')
+}

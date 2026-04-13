@@ -1,0 +1,9 @@
+/secrets/
+/docs/
+*.env
+.env.*
+*.pem
+*.key
+*.p12
+*.jks
+credentials.json

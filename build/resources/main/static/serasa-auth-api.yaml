@@ -1,0 +1,489 @@
+openapi: 3.0.3
+info:
+  title: ms-serasa-api
+  version: 2.0.0
+  description: >
+    API interna para autenticacao e consulta de relatorios Serasa PF/PJ.
+    Endpoint interno de consulta e POST, enquanto a integracao externa para PF/PJ usa GET com headers e reportName.
+paths:
+  /v1/serasa/token:
+    post:
+      tags:
+        - serasa-auth
+      operationId: generateSerasaToken
+      summary: Gera token de acesso Serasa (contexto PF ou PJ)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TokenRequest'
+            examples:
+              pf:
+                value:
+                  tipo: PF
+              pj:
+                value:
+                  tipo: PJ
+      responses:
+        '200':
+          description: Token gerado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+        '400':
+          description: Payload invalido
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Erro interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /v1/serasa/consultas:
+    post:
+      tags:
+        - serasa-relatorios
+      operationId: consultarRelatorioSerasa
+      summary: Consulta relatorio Serasa PF ou PJ
+      description: >
+        Endpoint unico da API interna.
+        - PF externo: GET /credit-services/person-information-report/v1/creditreport
+        - PJ externo: GET /credit-services/business-information-report/v1/reports
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConsultaRequest'
+            examples:
+              pf_top_score:
+                summary: Consulta PF top score
+                value:
+                  tipo: PF
+                  documento: "00047668148"
+                  features:
+                    - DADOS_CADASTRAIS
+                    - CONSULTAS_A_SERASA
+              pj_top_score:
+                summary: Consulta PJ top score
+                value:
+                  tipo: PJ
+                  documento: "03994975000170"
+                  features:
+                    - DADOS_CADASTRAIS
+                    - QSA
+                    - SCORE_POSITIVO
+      responses:
+        '200':
+          description: Relatorio retornado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConsultaResponse'
+              examples:
+                pf_success:
+                  summary: Exemplo de retorno 200 para consulta PF
+                  value:
+                    reports:
+                      - reportName: RELATORIO_INTERMEDIARIO_TOP_SCORE_PF
+                        registration:
+                          documentNumber: "00047668148"
+                          consumerName: UKLFRWX KVNXO UKLNRLH
+                          motherName: HDZTWNNSZ SVDVSOKHUZ DWAHFLF
+                          consumerGender: M
+                          birthDate: "1982-06-11"
+                          statusRegistration: REGULAR
+                          statusDate: "2020-09-26"
+                        negativeData:
+                          pefin:
+                            pefinResponse: []
+                            summary:
+                              count: 0
+                              balance: 0.0
+                          refin:
+                            refinResponse: []
+                            summary:
+                              count: 0
+                              balance: 0.0
+                          notary:
+                            notaryResponse: []
+                            summary:
+                              count: 0
+                              balance: 0.0
+                          check:
+                            checkResponse: []
+                            summary:
+                              count: 0
+                              balance: 0.0
+                          collectionRecords:
+                            collectionRecordsResponse: []
+                            summary:
+                              count: 0
+                              balance: 0.0
+                        score:
+                          codeMessage: 404
+                          message: 404 Score not found in CI-DATA-API.
+                        negativeSummary: {}
+                        facts:
+                          judgementFilings:
+                            judgementFilingsResponse: []
+                            summary:
+                              count: 0
+                              balance: 0.0
+                          bankrupts:
+                            bankruptsResponse: []
+                            summary:
+                              count: 0
+                              balance: 0.0
+                        partner:
+                          summary:
+                            count: 0
+                            balance: 0.0
+                pj_success:
+                  summary: Exemplo de retorno 200 para consulta PJ
+                  value:
+                    reports:
+                      - reportName: RELATORIO_INTERMEDIARIO_TOP_SCORE_PJ
+                        registration:
+                          companyDocument: "03994975000170"
+                          companyName: KLNVOGCSYQXYUFBECQVQ
+                          foundationDate: "2025-06-19"
+                          statusRegistration: "SITUACAO DO CNPJ EM 16/01/2022: BAIXADA"
+                          statusDate: "2022-01-16"
+                          address:
+                            addressLine: H LQIKX J A TTZ NT 162 UD 8489 QWP
+                            zipCode: "36578899"
+                            district: HIWH IVLZU SS JWWYM
+                            city: VICOSA
+                            state: MG
+                        negativeData:
+                          pefin:
+                            summary:
+                              count: 0
+                              balance: 0.0
+                          refin:
+                            summary:
+                              count: 0
+                              balance: 0.0
+                          collectionRecords:
+                            summary:
+                              count: 0
+                              balance: 0.0
+                          check:
+                            summary:
+                              count: 0
+                              balance: 0.0
+                          notary:
+                            summary:
+                              count: 0
+                              balance: 0.0
+                        facts:
+                          judgementFilings:
+                            summary:
+                              count: 0
+                              balance: 0.0
+                          bankrupts:
+                            bankruptsResponse:
+                              - eventDate: "2024-03-12"
+                                availabilityDate: "2024-06-19"
+                                inclusionDate: "2024-06-12"
+                                eventType: BA
+                                origin: VARA
+                                city: SAO PAULO
+                                state: SP
+                                varaCourt: "1"
+                                legalNature: BA
+                                legalSquare: SPO
+                                cadus: AZXAS35OM8
+                              - eventDate: "2024-03-12"
+                                availabilityDate: "2024-06-19"
+                                inclusionDate: "2024-06-12"
+                                eventType: EX
+                                origin: VARA
+                                city: SAO PAULO
+                                state: SP
+                                varaCourt: "1"
+                                legalNature: EX
+                                legalSquare: SPO
+                                cadus: A98S4MWC8B
+                            summary:
+                              firstOccurrence: "2024-03-12"
+                              lastOccurrence: "2024-03-12"
+                              count: 1
+                              balance: 0.0
+                        score:
+                          score: 900
+                          scoreModel: HPJ9
+                          defaultRate: "00030"
+                          message: "PROBABILIDADE DE INADIMPLENCIA: 0,3%"
+                          billing: true
+                        partner:
+                          PartnerResponse:
+                            results:
+                              - documentId: ""
+                                name: HUZ YKAWFC PSWGKKTK EWUC
+                                participationPercentage: 100.0
+                                inconsistent: false
+                                hasNegative: false
+                        director:
+                          DirectorResponse:
+                            results:
+                              - documentType: CPF
+                                documentId: ""
+                                name: HUZ YKAWFC PSWGKKTK EWUC
+                                role: ADMINISTRADOR
+                                hasNegative: false
+                        negativeSummary: {}
+        '400':
+          description: Validacao de entrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              examples:
+                tipo_invalido:
+                  value:
+                    code: VALIDATION_ERROR
+                    message: "tipo: valor invalido. Use PF ou PJ"
+                    timestamp: "2026-04-09T16:02:11.363511300Z"
+                documento_invalido:
+                  value:
+                    code: VALIDATION_ERROR
+                    message: "documento: Documento invalido para tipo PJ"
+                    timestamp: "2026-04-09T16:06:29.069850800Z"
+        '405':
+          description: Metodo HTTP invalido para o endpoint
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              example:
+                code: METHOD_NOT_ALLOWED
+                message: Metodo HTTP nao suportado. Use POST
+                timestamp: "2026-04-09T16:03:49.676000000Z"
+        '500':
+          description: Erro interno ou erro de integracao Serasa
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              examples:
+                serasa_document_not_found:
+                  value:
+                    code: SERASA_REPORT_ERROR
+                    message: "Falha ao consultar relatorio na Serasa: [{\"code\":\"404\",\"message\":\"[ERROR][DOCUMENT_NOT_FOUND] Documento nao encontrado na Serasa Experian.\"}]"
+                    timestamp: "2026-04-09T16:11:40.436190200Z"
+components:
+  schemas:
+    TipoConsulta:
+      type: string
+      enum:
+        - PF
+        - PJ
+    TokenRequest:
+      type: object
+      required:
+        - tipo
+      properties:
+        tipo:
+          $ref: '#/components/schemas/TipoConsulta'
+    TokenResponse:
+      type: object
+      required:
+        - accessToken
+        - tokenType
+        - expiresIn
+        - expiresAt
+        - context
+      properties:
+        accessToken:
+          type: string
+        tokenType:
+          type: string
+        expiresIn:
+          type: integer
+          format: int64
+        expiresAt:
+          type: string
+          format: date-time
+        context:
+          $ref: '#/components/schemas/TipoConsulta'
+    ConsultaRequest:
+      type: object
+      required:
+        - tipo
+        - documento
+        - features
+      properties:
+        tipo:
+          $ref: '#/components/schemas/TipoConsulta'
+        documento:
+          type: string
+          description: CPF (PF) ou CNPJ (PJ), sem mascara.
+          example: "03994975000170"
+        features:
+          type: array
+          minItems: 1
+          items:
+            $ref: '#/components/schemas/ReportFeature'
+          description: >
+            Lista de opcoes de emissao de relatorio.
+            Consulte as listas separadas em ReportFeaturePf e ReportFeaturePj para escopo especifico.
+    ReportFeature:
+      type: string
+      enum:
+        - DADOS_CADASTRAIS
+        - QSA
+        - QSA_COMPLETO
+        - CONSULTAS_A_SERASA
+        - SCORE_POSITIVO
+        - PARTICIPACOES
+        - ANOTACOES_CONSULTAS_SPC
+        - LIMITE_CREDITO
+        - GASTO_ESTIMADO_POSITIVO
+        - PONTUALIDADE_PAGAMENTO
+        - CAPACIDADE_MENSAL_PAGAMENTO
+        - FATURAMENTO_ESTIMADO_POSITIVO
+        - RECOMENDACAO_LIMITE_CREDITO
+        - PERFIL_FINANCEIRO
+        - INDICE_RELACIONAMENTO_MERCADO_SETOR_PJ
+        - RISCO_NOVAS_EMPRESAS
+        - SCORE_FRAUDE_PJ
+        - SCORE_CUSTOMIZADO
+        - INDICADORES_RECEBIVEIS_SEM_CONSENTIMENTO
+        - DIVIDAS_ORGAOS_PUBLICOS
+        - LOCALIZACAO_PJ
+        - CONSULTAS_DETALHADAS_SERASA
+        - SCORE_DE_SOCIO_PJ
+        - ANOTACOES_CONSULTAS_SPC_SOCIOS_ADMINISTRADORES
+        - SITUACAO_FISCAL
+        - COMPORTAMENTO_PAGAMENTO_SETOR
+        - MOSAIC_BUSINESS
+        - SCORE_DE_CREDITO_SETORIAL
+        - HISTORICO_DE_PAGAMENTO_COMERCIAL_INTERMEDIARIO
+        - HISTORICO_DE_PAGAMENTO_FINANCEIRO_INTERMEDIARIO_CONCENTRE
+        - MAIS_ANOTACOES
+        - SCORE_EMPRESA_E_SETOR
+        - VENDAS_CARTAO
+        - SCORE_LONGEVIDADE_EMPRESA
+        - INDICADOR_RECUPERACAO_CREDITO_PJ
+        - AGRO_SCORE_PJ
+        - FATURAMENTO_RECEBIVEIS
+        - SCORE_POSITIVO_SCORE_POSITIVO_PME
+        - PARTICIPACAO_SOCIETARIA
+        - COMPROMETIMENTO_RENDA
+        - CAPACIDADE_PAGAMENTO
+        - HISTORICO_PAGAMENTO
+        - PONTUALIDADE_PAGAMENTO_PF
+        - RENDA_ESTIMADA
+        - RECOMENDACAO_LIMITE_CREDITO
+        - LOCALIZACAO_PF
+        - SCORE_FRAUDE_PF
+        - INDICE_RELACIONAMENTO_MERCADO_SETOR_PF
+        - SCORE_CURTO_PRAZO
+        - ALERTA_OBITO
+        - AGRO_SCORE_PF
+        - AGRO_RENDA_ESTIMADA
+        - SEGMENTACAO_MOSAIC
+        - RISCO_CREDITO_PERFIL
+        - ACHEI_RECHEQUE_PF_DOCUMENTO
+        - ACHEI_RECHEQUE_PF_BANCO
+        - ACHEI_RECHEQUE_PF_CMC7
+        - RENDA_ESTIMADA_PF
+        - RENDA_MAIS
+        - INDICADOR_RECUPERACAO_CREDITO_PF
+      description: Opcoes de emissao de relatorio para PF e PJ.
+    ReportFeaturePj:
+      type: string
+      enum:
+        - DADOS_CADASTRAIS
+        - QSA
+        - QSA_COMPLETO
+        - CONSULTAS_A_SERASA
+        - SCORE_POSITIVO
+        - PARTICIPACOES
+        - ANOTACOES_CONSULTAS_SPC
+        - LIMITE_CREDITO
+        - GASTO_ESTIMADO_POSITIVO
+        - PONTUALIDADE_PAGAMENTO
+        - CAPACIDADE_MENSAL_PAGAMENTO
+        - FATURAMENTO_ESTIMADO_POSITIVO
+        - RECOMENDACAO_LIMITE_CREDITO
+        - PERFIL_FINANCEIRO
+        - INDICE_RELACIONAMENTO_MERCADO_SETOR_PJ
+        - RISCO_NOVAS_EMPRESAS
+        - SCORE_FRAUDE_PJ
+        - SCORE_CUSTOMIZADO
+        - INDICADORES_RECEBIVEIS_SEM_CONSENTIMENTO
+        - DIVIDAS_ORGAOS_PUBLICOS
+        - LOCALIZACAO_PJ
+        - CONSULTAS_DETALHADAS_SERASA
+        - SCORE_DE_SOCIO_PJ
+        - ANOTACOES_CONSULTAS_SPC_SOCIOS_ADMINISTRADORES
+        - SITUACAO_FISCAL
+        - COMPORTAMENTO_PAGAMENTO_SETOR
+        - MOSAIC_BUSINESS
+        - SCORE_DE_CREDITO_SETORIAL
+        - HISTORICO_DE_PAGAMENTO_COMERCIAL_INTERMEDIARIO
+        - HISTORICO_DE_PAGAMENTO_FINANCEIRO_INTERMEDIARIO_CONCENTRE
+        - MAIS_ANOTACOES
+        - SCORE_EMPRESA_E_SETOR
+        - VENDAS_CARTAO
+        - SCORE_LONGEVIDADE_EMPRESA
+        - INDICADOR_RECUPERACAO_CREDITO_PJ
+        - AGRO_SCORE_PJ
+        - FATURAMENTO_RECEBIVEIS
+      description: Lista separada de opcoes de emissao para escopo PJ.
+    ReportFeaturePf:
+      type: string
+      enum:
+        - DADOS_CADASTRAIS
+        - CONSULTAS_A_SERASA
+        - SCORE_POSITIVO_SCORE_POSITIVO_PME
+        - PARTICIPACAO_SOCIETARIA
+        - ANOTACOES_CONSULTAS_SPC
+        - COMPROMETIMENTO_RENDA
+        - CAPACIDADE_PAGAMENTO
+        - HISTORICO_PAGAMENTO
+        - PONTUALIDADE_PAGAMENTO_PF
+        - RENDA_ESTIMADA
+        - RECOMENDACAO_LIMITE_CREDITO
+        - LOCALIZACAO_PF
+        - SCORE_FRAUDE_PF
+        - INDICE_RELACIONAMENTO_MERCADO_SETOR_PF
+        - SCORE_CURTO_PRAZO
+        - ALERTA_OBITO
+        - AGRO_SCORE_PF
+        - AGRO_RENDA_ESTIMADA
+        - SEGMENTACAO_MOSAIC
+        - RISCO_CREDITO_PERFIL
+        - ACHEI_RECHEQUE_PF_DOCUMENTO
+        - ACHEI_RECHEQUE_PF_BANCO
+        - ACHEI_RECHEQUE_PF_CMC7
+        - RENDA_ESTIMADA_PF
+        - RENDA_MAIS
+        - INDICADOR_RECUPERACAO_CREDITO_PF
+      description: Lista separada de opcoes de emissao para escopo PF.
+    ConsultaResponse:
+      type: object
+      additionalProperties: true
+      description: Payload retornado pela Serasa (pass-through), varia por tipo PF/PJ e features.
+    ErrorResponse:
+      type: object
+      required:
+        - code
+        - message
+        - timestamp
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
